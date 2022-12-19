@@ -1,33 +1,38 @@
-using Unity.UI;
 using UnityEngine;
+
+// ReSharper disable RedundantCheckBeforeAssignment
 
 public class InputNode : MonoBehaviour
 {
+    public GameObject connectedNode;
+    [Tooltip("ON/OFF")] public bool state;
     private GameObject _connector;
     private SpriteRenderer _connectorRenderer;
-    [Tooltip("ON/OFF")]
-    public bool state;
 
-    void Awake()
+    private void Awake()
     {
-        _connector = this.transform.GetChild(0).gameObject;
+        _connector = transform.GetChild(0).gameObject;
         _connectorRenderer = _connector.GetComponent<SpriteRenderer>();
     }
 
-    void OnMouseDown()
+    private void OnMouseDown()
     {
         switch (state)
         {
             case true:
-                _connectorRenderer.color = Color.black;
                 state = false;
+                _connectorRenderer.color = Color.black;
+                if (connectedNode != null)
+                    connectedNode.GetComponent<OutputNode>().connectionAmount--;
                 break;
+
+
             case false:
-                _connectorRenderer.color = Color.yellow;
                 state = true;
+                _connectorRenderer.color = Color.yellow;
+                if (connectedNode != null)
+                    connectedNode.GetComponent<OutputNode>().connectionAmount++;
                 break;
-
-
         }
     }
 }

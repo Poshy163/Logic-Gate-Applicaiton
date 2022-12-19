@@ -10,9 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 7394647416410030228}
   - component: {fileID: 969356460238073969}
+  - component: {fileID: 7431049683722742136}
   m_Layer: 0
   m_Name: Output
-  m_TagString: Untagged
+  m_TagString: Output
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -84,6 +85,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!58 &7431049683722742136
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2004972991177483937}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.5
 --- !u!1 &3247635242307127020
 GameObject:
   m_ObjectHideFlags: 0
@@ -98,7 +115,7 @@ GameObject:
   - component: {fileID: 6210430945505736845}
   m_Layer: 0
   m_Name: Output Node
-  m_TagString: Untagged
+  m_TagString: Output
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -184,9 +201,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.07969356, y: 0}
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 0.57969356
 --- !u!114 &6210430945505736845
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -199,3 +216,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: abeacac2a46d4c54b905cfc03c4a2ed1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  state: 0
+  hasConnection: 0
